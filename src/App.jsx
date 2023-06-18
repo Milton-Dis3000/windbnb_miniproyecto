@@ -1,36 +1,91 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import ImagContainer from "./components/ImagContainer";
 
 function App() {
-  // La variable data es la que va a almacenar los datos de "stays.json" y setData nos ayudará a guardar esos datos en esa variable. Es necesario que inicialicemos esa variable como un array vacío para evitar errores.
   const [data, setData] = useState([]);
 
-  // Función para traer los datos de "stays.json".
   const getData = async () => {
-    // Esta sentencia try-catch sirve para manejar los errores que se podrían generar al importar los datos de "stays.json".
     try {
-      const res = await fetch("stays.json");
-      const resJson = await res.json();
-      // Aquí guardamos los datos de "stays.json" en la variable data.
-      setData(resJson);
+      const response = await fetch("stays.json");
+      const data = await response.json();
+      setData(data);
+
+      console.log(data);
     } catch (error) {
       console.log(error);
     }
   };
-
-  // Este Hook te va a ejecutar la función getData cada vez que la página se renderice.
   useEffect(() => {
-     getData();
+    getData();
   }, []);
 
-  // Puedes ver la variable data en consola.
-  console.log(data);
   return (
     <>
-    {/* Aquí te dejo un ejemplo de cómo podrías imprimir varios elementos a la vez. */}
-      {data.map((el, i) => {
-        return <h1 key={i}>{el.city}</h1>;
-      })}
+      <section className="container">
+        <div className="nav">
+          <div className="logoBnb">
+            <img id="logotipo" src="src\img\logo.png" alt="" />
+          </div>
+          <div className="search">
+            <button id="ubication">
+              <h3>Helsinki, Finland</h3>
+            </button>
+            <button id="ubication">
+              <h4>Add guest</h4>
+            </button>
+            <button id="iconSearch">
+              <img
+                id="lup"
+                src="src\icons\search_FILL0_wght400_GRAD0_opsz48.svg"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+        <div className="subTitle">
+          <h2>Stays in Finland</h2>
+          <h3>12 + Stays</h3>
+        </div>
+
+        
+        <div className="imagGroup">
+          <main className="imagecontainer">
+
+            {data.map((post, index) => (
+            
+              <>
+              <img id="principalImage" src={post.photo} alt="bedRoom" />
+
+              <div className="photoFooter">
+                <button id="host">
+                <h2>{post.button}</h2>
+                <p>SUPER HOST</p>
+                </button>
+
+              <div className="beds">
+                <h4>{post.type}</h4>
+              </div>
+
+              <div className="star">
+                <img id="iconStar" src="src\icons\starbnb.svg" alt="" />
+                <h4>{post.rating}</h4>
+              </div>
+
+              </div>
+
+              
+              <div className="stylist">
+                <h2>{post.title}</h2>
+              </div>
+              </>
+            ))}
+        </main>
+
+        </div>
+
+        
+      </section>
     </>
   );
 }
