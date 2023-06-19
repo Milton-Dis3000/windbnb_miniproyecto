@@ -5,8 +5,11 @@
 
 }
 .container{
-    width: 1440;
+    width: 1440px;
     height: auto;
+    display: flex;
+    flex-direction: column;
+
     
     
 }
@@ -132,29 +135,29 @@
     
 }
 
-/* Conponents */
-.imagGroup{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 35px;
-   
-    
-   
-}
+
 
 /* imagenContainer */
+
+
+.imagGroup{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+  }
+
+
+
+
 .imagecontainer{
     width: 395px;
     height: 370px;
     left: 94px;
-   
-  
-   
-    
-
-    
-    
+    display: flex;
+    flex-direction: column;
+      
 }
 
 #principalImage{
@@ -237,4 +240,5 @@
     color: #333333;
     
 }
+
 

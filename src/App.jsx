@@ -25,7 +25,7 @@ function App() {
       <section className="container">
         <div className="nav">
           <div className="logoBnb">
-            <img id="logotipo" src=".src\icons\starbnb.svg" alt="" />
+            <img id="logotipo" src="src\img\logo.svg" alt="" />
           </div>
           <div className="search">
             <button id="ubication">
@@ -48,43 +48,35 @@ function App() {
           <h3>12 + Stays</h3>
         </div>
 
-        
         <div className="imagGroup">
-          <main className="imagecontainer">
-
+          <div className="imagecontainer">
             {data.map((post, index) => (
-            
               <>
-              <img id="principalImage" src={post.photo} alt="bedRoom" />
+                <img id="principalImage" src={post.photo} alt="bedRoom" />
 
-              <div className="photoFooter">
-                <button id="host">
-                <h2>{post.button}</h2>
-                <p>SUPER HOST</p>
-                </button>
+                <div className="photoFooter">
+                  <button id="host">
+                    <h2>{post.button}</h2>
+                    <p>SUPER HOST</p>
+                  </button>
 
-              <div className="beds">
-                <h4>{post.type}</h4>
-              </div>
+                  <div className="beds">
+                    <h4>{post.type}</h4>
+                  </div>
 
-              <div className="star">
-                <img id="iconStar" src="src\icons\starbnb.svg" alt="" />
-                <h4>{post.rating}</h4>
-              </div>
+                  <div className="star">
+                    <img id="iconStar" src="src\icons\starbnb.svg" alt="" />
+                    <h4>{post.rating}</h4>
+                  </div>
+                </div>
 
-              </div>
-
-              
-              <div className="stylist">
-                <h2>{post.title}</h2>
-              </div>
+                <div className="stylist">
+                  <h2>{post.title}</h2>
+                </div>
               </>
             ))}
-        </main>
-
+          </div>
         </div>
-
-        
       </section>
     </>
   );
