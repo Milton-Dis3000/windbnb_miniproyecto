@@ -35,11 +35,10 @@ function App() {
               <h4>Add guest</h4>
             </button>
             <button id="iconSearch">
-              <img
-                id="lup"
-                src="src\icons\search_FILL0_wght400_GRAD0_opsz48.svg"
-                alt=""
-              />
+            <span class="material-symbols-outlined">
+            search
+            </span>
+            
             </button>
           </div>
         </div>
