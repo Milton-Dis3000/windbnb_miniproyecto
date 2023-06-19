@@ -35,11 +35,10 @@ function App() {
               <h4>Add guest</h4>
             </button>
             <button id="iconSearch">
-            <span class="material-symbols-outlined">
-            search
-            </span>
-            
+            <span class="material-symbols-outlined">search</span>
+              
             </button>
+
           </div>
         </div>
         <div className="subTitle">
@@ -54,6 +53,7 @@ function App() {
                 <img id="principalImage" src={post.photo} alt="bedRoom" />
 
                 <div className="photoFooter">
+                  
                   <button id="host">
                     <h2>{post.button}</h2>
                     <p>SUPER HOST</p>
