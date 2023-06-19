@@ -25,7 +25,7 @@ function App() {
       <section className="container">
         <div className="nav">
           <div className="logoBnb">
-            <img id="logotipo" src="src\img\logo.png" alt="" />
+            <img id="logotipo" src=".src\icons\starbnb.svg" alt="" />
           </div>
           <div className="search">
             <button id="ubication">
