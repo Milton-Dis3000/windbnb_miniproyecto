@@ -25,7 +25,7 @@ function App() {
       <section className="container">
         <div className="nav">
           <div className="logoBnb">
-            <img id="logotipo" src="src\img\logo.svg" alt="" />
+            <img id="logotipo" src="./src/img/logo.svg" alt="Logotipo" />
           </div>
           <div className="search">
             <button id="ubication">
@@ -35,7 +35,7 @@ function App() {
               <h4>Add guest</h4>
             </button>
             <button id="iconSearch">
-            <span class="material-symbols-outlined">search</span>
+            <span className="material-symbols-outlined">search</span>
               
             </button>
 
@@ -64,7 +64,7 @@ function App() {
                   </div>
 
                   <div className="star">
-                    <img id="iconStar" src="src\icons\starbnb.svg" alt="" />
+                    <img id="iconStar" src="./src/icons/starbnb.svg" alt="Star" />
                     <h4>{post.rating}</h4>
                   </div>
                 </div>
